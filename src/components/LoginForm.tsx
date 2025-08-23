@@ -11,8 +11,8 @@ interface LoginFormProps {
 }
 
 export default function LoginForm({ onLogin }: LoginFormProps) {
-  const [username, setUsername] = useState('patient');
-  const [password, setPassword] = useState('password');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const [role, setRole] = useState('patient');
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -82,14 +82,6 @@ export default function LoginForm({ onLogin }: LoginFormProps) {
               Sign In
             </Button>
           </form>
-          
-          <div className="mt-6 p-4 bg-secondary rounded-lg">
-            <p className="text-sm text-secondary-foreground text-center">
-              <strong>Demo Accounts:</strong><br />
-              Patient: patient/password<br />
-              Doctor: doctor/password
-            </p>
-          </div>
         </CardContent>
       </Card>
     </div>
